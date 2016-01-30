@@ -1,0 +1,33 @@
+<?php echo $__env->make('member.layouts.post_head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<body id="page1" onLoad="new ElementMaxHeight();">
+<div class="tail-bottom">
+	<div id="main" class="zerogrid">
+<!-- header -->
+		<header>
+			<div class="nav-box">
+				<nav>
+<ul class="normal-menu">
+	<?php if(Auth::user()): ?>
+	<ul class="fright">
+		<li><a href="<?php echo URL::route('account-logout'); ?>"><?php echo HTML::image('images/logout.png','logout'); ?></a><div id="desc">Logout</div></li>
+	</ul>
+	<li><a href="<?php echo URL::route('member-home'); ?>">Home</a></li>
+	<?php else: ?>
+	<ul class="fright">
+		<li><a href="<?php echo URL::route('signup-get'); ?>"><?php echo HTML::image('images/user.png'); ?></a><div id="desc">Sign Up</div></li>
+	</ul>
+	<li><a href="<?php echo URL::route('home'); ?>">Home</a></li>
+	<?php endif; ?>	
+	<li><a href="<?php echo URL::route('about-get'); ?>">About</a></li>
+	<li><a href="<?php echo URL::route('terms-get'); ?>">Terms</a></li>
+	<li><a href="<?php echo URL::route('privacy-get'); ?>">Privacy</a></li>
+	<li><a href="<?php echo URL::route('help-get'); ?>">Help</a></li>			
+</ul>
+</header>
+
+
+
+
+<?php echo $__env->yieldContent('content'); ?>
+
+<?php echo $__env->make('guest.layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

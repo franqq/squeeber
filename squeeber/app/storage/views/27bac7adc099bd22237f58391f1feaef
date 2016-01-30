@@ -1,0 +1,22 @@
+		<div class="countriesfeaturephoneh">Select Your Country</div>
+														
+														<div style="width:100%;">
+															<div class="countriesfeaturephonescreen">
+															<ul class="mysqueeb">
+																 <?php foreach($countries as $country): ?>
+																 
+																
+																	<li>
+																		<strong>
+																 		 <a href="<?php echo URL::route('selectcountryid',strtolower($country->code)); ?>"><?php echo $country->alias; ?></a>
+																 		</strong>
+																   </li>
+																
+																
+																<?php endforeach; ?>
+															</ul>
+															</div>
+															
+															
+															
+														</div>

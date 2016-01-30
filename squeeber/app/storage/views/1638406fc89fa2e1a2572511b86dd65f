@@ -1,0 +1,12 @@
+<body id="page1" onLoad="new ElementMaxHeight();">
+<div class="tail-bottom">
+	<div id="main" class="zerogrid">
+<!-- header -->
+		<header>
+			<div class="nav-box">
+				<nav>
+					<ul class="fright">
+						<li><a href="<?php echo URL::route('home'); ?>"><?php echo HTML::image('images/home.png','home'); ?></a><div id="desc">Home</div></li>
+						<li><a href="<?php echo URL::route('login-get'); ?>"><?php echo HTML::image('images/user.png','login'); ?></a><div id="desc">Login</div></li>
+						<li><a href="<?php echo URL::route('post-get'); ?>"><?php echo HTML::image('images/post.png','post'); ?></a><div id="desc">Post</div></li>
+					</ul>

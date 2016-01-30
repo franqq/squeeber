@@ -1,0 +1,16 @@
+					<div class='response-menu'>
+						<div><?php echo HTML::image('images/menu2.png','menu'); ?></div>
+						<select onChange="location=this.value">
+							<option></option>
+							<option value="<?php echo URL::route('home'); ?>">Home</option>
+							<option value="<?php echo URL::route('notices-get'); ?>">Notices</option>
+							<option value="<?php echo URL::route('events-get'); ?>">Events</option>
+							<option value="<?php echo URL::route('offers-get'); ?>">Offers</option>
+							<option value="<?php echo URL::route('jobs-get'); ?>">Jobs</option>
+							<option value="#">Search</option>
+						</select>
+					</div>
+				</nav>
+			</div>
+			
+		</header>

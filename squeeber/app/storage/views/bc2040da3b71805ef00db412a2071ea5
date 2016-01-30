@@ -1,0 +1,73 @@
+<div class="countriestabh">Select Your Country</div>
+														
+														<div style="width:100%;">
+															<div class="countriestabscreen">
+															<ul class="mysqueeb">
+																 <?php foreach($countries as $country): ?>
+																 <?php if($country->id<=65): ?>
+																
+																	<li>
+																		<strong>
+																 		 <a href="<?php echo URL::route('selectcountryid',strtolower($country->code)); ?>"><?php echo $country->alias; ?></a>
+																 		</strong>
+																   </li>
+																
+																<?php endif; ?>
+																<?php endforeach; ?>
+															</ul>
+															</div>
+															
+															<div class="countriestabscreen">
+															<ul class="mysqueeb">
+																 <?php foreach($countries as $country): ?>
+																 <?php if($country->id>65 && $country->id<=164): ?>
+																
+																	<li>
+																		<strong>
+																 		 <a href="<?php echo URL::route('selectcountryid',strtolower($country->code)); ?>" ><?php echo $country->alias; ?></a>
+																 		</strong>
+																   </li>
+																
+																<?php endif; ?>
+																<?php endforeach; ?>
+															</ul>
+															</div> 
+															
+															
+															<div class="countriestabscreen" >
+															<ul class="mysqueeb">
+																 <?php foreach($countries as $country): ?>
+																 <?php if($country->id>164 && $country->id<=208): ?>
+																
+																	<li>
+																		<strong>
+																 		 <a href="<?php echo URL::route('selectcountryid',strtolower($country->code)); ?>" ><?php echo $country->alias; ?></a>
+																 		</strong>
+																   </li>
+																
+																<?php endif; ?>
+																<?php endforeach; ?>
+															</ul>
+															</div> 
+															
+															
+														
+														
+															<div class="countriestabscreen">
+															<ul class="mysqueeb">
+																 <?php foreach($countries as $country): ?>
+																 <?php if($country->id>208): ?>
+																
+																	<li>
+																		<strong>
+																 		 <a href="<?php echo URL::route('selectcountryid',strtolower($country->code)); ?>" ><?php echo $country->alias; ?></a>
+																 		</strong>
+																   </li>
+																
+																<?php endif; ?>
+																<?php endforeach; ?>
+															</ul>
+															</div> 
+															
+														</div>
+														

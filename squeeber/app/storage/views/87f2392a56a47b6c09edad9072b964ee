@@ -1,0 +1,32 @@
+<?php if(Auth::user()): ?>
+					<?php echo $__env->make('member.layouts.post_head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+					<?php echo $__env->make('member.layouts.responsive_menu_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+					<ul class="normal-menu">
+						<li><a href="<?php echo URL::route('member-home'); ?>">Home</a></li>
+						<li><a href="<?php echo URL::route('notices-get'); ?>">Notices</a></li>
+						<li><a href="<?php echo URL::route('events-get'); ?>">Events</a></li>
+						<li><a href="<?php echo URL::route('offers-get'); ?>">Offers</a></li>
+						<li><a href="<?php echo URL::route('jobs-get'); ?>">Jobs</a></li>
+						<li><a href="<?php echo URL::route('newcollege-get'); ?>">College</a></li>
+						<li>
+						<?php echo $__env->make('member.layouts.search_box', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+					</li>
+					</ul>
+<?php else: ?>
+					<?php echo $__env->make('guest.layouts.post_head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+					<?php echo $__env->make('guest.layouts.responsive_menu_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+					<ul class="normal-menu">
+						<li><a href="<?php echo URL::route('home'); ?>">Home</a></li>
+						<li><a href="<?php echo URL::route('notices-get'); ?>">Notices</a></li>
+						<li><a href="<?php echo URL::route('events-get'); ?>">Events</a></li>
+						<li><a href="<?php echo URL::route('offers-get'); ?>">Offers</a></li>
+						<li><a href="<?php echo URL::route('jobs-get'); ?>">Jobs</a></li>
+						<li>
+						<?php echo $__env->make('guest.layouts.search_box', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+					</li>
+					</ul>
+<?php endif; ?>
+<?php echo $__env->make('guest.layouts.phone_menu_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->yieldContent('content'); ?>
+
+<?php echo $__env->make('guest.layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

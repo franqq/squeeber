@@ -1,0 +1,66 @@
+@extends('guest.layouts.advanced_header')
+@section('content')
+<div class="wrapper indent">
+			
+		
+<!-- content -->
+			<section id="login_content" style="width:96%;margin-left:2%;" >
+				
+				
+				
+						<div class="box maxheight">
+							<div class="border-right maxheight">
+								<div class="border-bot maxheight">
+									<div class="border-left maxheight">
+										<div class="left-top-corner maxheight">
+											<div class="right-top-corner maxheight">
+												
+												<h2 style="text-transform:capitalize;"><span>About Squeeber</span>	
+												</h2>
+												
+												<div class="inner">
+														
+													
+													<div class="post">
+													
+														
+														@if(Session::has('global'))
+															<p align="center" class="post_global">{{Session::get('global')}} </p>
+														@endif 
+																												
+														
+														 	<strong>Squeeber is simply your next generation college noticeboard.</strong>
+
+															<p>Squeeber provides a simple solution to the complications involved in college students all over the world having to print notices and pin them in all notice boards within the college premises. Squeeber provides a platform where anyone can communicate to the students in any college by <strong>creating a free squeeb(notice)</strong> be it an event,an official notice, sales or Jobs and Internship information</p>
+															
+															
+															<ul>
+																<strong>On Squeeber you can:</strong>
+															    <li>Easily create and post rich squeebs(notices) with a picture.</li>
+															    <li>Share your squeeb on your social networking profile (Facebook, Twitter)</li>
+															    <li>Access the site from your mobile phone</li>
+															</ul>
+															<p>
+																If your college/campus doesnt exist in the listed colleges, simply add it by first creating an account and following the instruction once your have logged in.
+															</p>
+															
+															<p>Squeeber is currently available for use by any English speaking country.</p>
+															<p>squeeber was founded in December 2013  is privately held.</p>			
+													
+													
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+			</section>
+			
+			
+			
+			
+			
+		</div>
+@stop

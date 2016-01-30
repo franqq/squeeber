@@ -1,0 +1,62 @@
+<?php $__env->startSection('content'); ?>
+<div class="wrapper indent">
+			
+		
+<!-- content -->
+			<section id="login_content" style="width:96%;margin-left:2%;" >
+				
+				
+				
+						<div class="box maxheight">
+							<div class="border-right maxheight">
+								<div class="border-bot maxheight">
+									<div class="border-left maxheight">
+										<div class="left-top-corner maxheight">
+											<div class="right-top-corner maxheight">
+												
+												<h2 style="text-transform:capitalize;"><span>Welcome to Squeeber</span>	
+												</h2>
+												
+												<div class="inner">
+														
+													
+													<div class="post">
+													
+														
+														<?php if(Session::has('global')): ?>
+															<p align="center" class="post_global"><?php echo Session::get('global'); ?> </p>
+														<?php endif; ?> 
+																												
+														
+													<div class="countriesdesktopdisplay">															
+													<?php echo $__env->make('guest.layouts.countries_main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+													</div>
+													<div class="countriestabdisplay">															
+													<?php echo $__env->make('guest.layouts.countries_tab', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+													</div>	
+													<div class="countriesphonedisplay">															
+													<?php echo $__env->make('guest.layouts.countries_phone', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+													</div>
+													<div class="countriesfeaturephonedisplay">															
+													<?php echo $__env->make('guest.layouts.countries_feature_phone', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+													</div>
+														
+													
+													
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+			</section>
+			
+			
+			
+			
+			
+		</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('guest.layouts.selects_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
